@@ -29,14 +29,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 5
                     //    0 , 1 , 2 , 3 , 4 , 5
-#define MATRIX_ROW_PINS { B2, B3, B1, B6, F7, F6}
-#define MATRIX_COL_PINS { C6, D7, E6, B4, B5}
+#define MATRIX_ROW_PINS { B4, E6, D7, B5, C6, F6}
+#define MATRIX_COL_PINS { F7, B1, B3, B2, B6}
 
 #define DIODE_DIRECTION COL2ROW
 
-#define BACKLIGHT_PIN D4
-#define BACKLIGHT_LEVELS 3
-#define BACKLIGHT_BREATHING
+#ifdef RGBLIGHT_ENABLE
+#define RGB_DI_PIN D4
+#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
+#define RGBLED_NUM 8
+#endif
 
 #define ENCODERS_PAD_A { F4 }
 #define ENCODERS_PAD_B { F5 }
