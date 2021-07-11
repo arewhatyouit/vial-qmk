@@ -28,6 +28,13 @@
   #define RGBLIGHT_LIMIT_VAL 150
 #endif
 
+#define VIAL_KEYBOARD_UID {0x78, 0x16, 0x57, 0x11, 0xEA, 0x2E, 0x8F, 0x5E}
+#define NO_ACTION_ONESHOT
+
+
+#define SPLIT_USB_DETECT
+#define SPLIT_USB_TIMEOUT 2000
+
 // If you are using an Elite C rev3 on the slave side, uncomment the lines below:
 // #define SPLIT_USB_DETECT
-// #define NO_USB_STARTUP_CHECK
+#define NO_USB_STARTUP_CHECK
