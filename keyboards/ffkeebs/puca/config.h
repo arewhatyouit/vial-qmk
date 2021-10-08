@@ -21,10 +21,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID    0x4646 // FF
-#define PRODUCT_ID   0x0001
+#define PRODUCT_ID   0x0002
 #define DEVICE_VER   0x0001
 #define MANUFACTURER FootFingers
-#define PRODUCT      puca
+#define PRODUCT      Puca
 
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 5
@@ -35,18 +35,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DIODE_DIRECTION COL2ROW
 
 #ifdef RGBLIGHT_ENABLE
-#define RGB_DI_PIN D4
-#define RGBLIGHT_ANIMATIONS
-#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
-#define RGBLED_NUM 8
+    #define RGB_DI_PIN D4
+    #define RGBLIGHT_ANIMATIONS
+    #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING
+    #define RGBLED_NUM 8
 #endif
+
 
 #define ENCODERS_PAD_A { F4 }
 #define ENCODERS_PAD_B { F5 }
 
-#define MY_I2C_ADDRESS (0X3C << 1)
-
 #define VIAL_KEYBOARD_UID {0x8C, 0x1C, 0xE2, 0xA0, 0xB6, 0x21, 0x58, 0x67} // Vial unique ID
+#define VIAL_ENCODER_DEFAULT { KC_VOLU, KC_VOLD , KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS }
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
@@ -59,3 +59,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
+

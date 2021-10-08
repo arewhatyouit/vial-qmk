@@ -33,20 +33,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT(
+    LAYOUT(
         KC_MUTE,         KC_PGUP, KC_PGDN,
 		TG(1),  KC_PSLS, KC_PAST, KC_PMNS,
-		KC_P7,  KC_P8,   KC_P9,   KC_PPLS,     KC_PPLS,
+		KC_P7,  KC_P8,   KC_P9,   KC_PPLS,  KC_PPLS,
 		KC_P4,  KC_P5,   KC_P6,   KC_PIPE,
-		KC_P1,  KC_P2,   KC_P3,   KC_KP_ENTER, KC_KP_ENTER,
-		KC_P0,  MC_00,   KC_PDOT, KC_PDOT,     KC_P0),
-    [1] = LAYOUT(
-        KC_TRNS,          KC_TRNS, KC_TRNS,
-		TG(1),   KC_NLCK, RGB_HUI, RGB_HUD,
-		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS)
+		KC_P1,  KC_P2,   KC_P3,   KC_ENTER, KC_ENTER,
+		KC_P0,  MC_00,   KC_PDOT, KC_PDOT,   
+                KC_P0),
+    LAYOUT(
+        KC_TRNS,          RGB_HUI, RGB_VAI,
+		TG(1),   RGB_TOG, RGB_HUD, RGB_VAD,
+		KC_LEFT, KC_UP,   KC_RGHT, RGB_MOD,  RGB_MOD,
+		KC_LEFT, KC_DOWN, KC_RGHT, KC_TRNS,
+		KC_INS,  KC_HOME, KC_END,  RGB_RMOD, RGB_RMOD,
+		KC_ESC,  KC_TRNS, KC_DEL,  KC_TRNS, 
+        KC_ESC)
 };
 
 // Encoder
