@@ -180,6 +180,12 @@ void oled_task_user(void) {
         case 1:
             oled_write_P(PSTR("FUNC\n"), false);
             break;
+        case 2:
+            oled_write_P(PSTR("MAC1\n"), false);
+            break;
+        case 3:
+            oled_write_P(PSTR("MAC2\n"), false);
+            break;
     }
 }
 #endif
